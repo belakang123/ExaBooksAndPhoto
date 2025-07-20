@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Gradient Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+        /* Body styles */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol";
+            background: linear-gradient(
+                to right,
+                #1f2937,
+                #374151,
+                #1f2937
+            ); /* Tailwind gray-900 to gray-800 to gray-900 */
+            color: #d1d5db; /* gray-300 */
+            min-height: 100vh;
+        }
+
+        /* Floating nav effect */
+        nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        nav a {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 8px;
+            color: #d1d5db; /* gray-300 */
+            text-decoration: none;
+        }
+
+        /* Animated underline effect */
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hover glow effect */
+        nav a:hover {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+            color: white;
+        }
+
+        /* Active item styling */
+        nav a.active {
+            color: #d1d5db; /* gray-300 */
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding-top: 20px;
+                flex-direction: column;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced Navbar with Mobile Responsiveness -->
+    <nav class="px-6 py-4 rounded-b-lg mx-4 mt-4 bg-transparent">
+        <div class="max-w-full mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img
+                    src="foto profil.jpg"
+                    alt="Company logo - minimalist geometric design"
+                    class="rounded-full w-8 h-8 object-cover"
+                />
+                <span class="text-gray-200 text-xl font-bold">Exa Books And Photo</span>
+            </div>
+
+            <button class="menu-icon md:hidden text-gray-200" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <div class="nav-links md:flex space-x-8">
+                <a href="index.html" class="active">Beranda</a>
+                <a href="portofolio.html">Portofolio</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="contak.html">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Additional Design Section with Communication Devices -->
+    <section
+        class="max-w-full mx-auto px-4 md:px-6 py-20 select-none relative overflow-hidden rounded-lg shadow-lg bg-transparent mt-12 text-gray-100"
+    >
+        <h3
+            class="text-3xl md:text-4xl font-extrabold mb-8 text-yellow-400 z-10 relative"
+        >
+            Apa itu digital marketing?
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 relative">
+            <div>
+                <p class="text-lg md:text-xl leading-relaxed mb-6 text-gray-100/85">
+                    Digital Marketing adalah strategi pemasaran yang menggunakan media
+                    digital untuk menjangkau dan berinteraksi dengan audiens secara
+                    efektif. Ini mencakup berbagai teknik seperti pemasaran melalui media
+                    sosial, optimasi mesin pencari (SEO), pemasaran konten, email
+                    marketing, dan iklan berbayar online. Dengan digital marketing,
+                    bisnis dapat meningkatkan visibilitas, membangun merek, dan
+                    meningkatkan penjualan secara signifikan.
+                </p>
+                <p class="text-lg md:text-xl leading-relaxed text-gray-100/85">
+                    Di era digital saat ini, pemasaran digital menjadi kunci sukses bagi
+                    pengusaha dan perusahaan untuk tetap kompetitif dan relevan di pasar
+                    global.
+                </p>
+            </div>
+            <div class="flex justify-center">
+                <img
+                    src="https://ts2.mm.bing.net/th?id=OIP.wsKYyp18LJUsgpvAz2ATFwHaE2&pid=15.1"
+                    alt="Gambar alat komunikasi modern seperti laptop dan smartphone"
+                    class="rounded-lg shadow-lg max-w-full h-auto object-cover border-4 border-white-100"
+                />
+            </div>
+        </div>
+        <!-- Decorative SVG or shapes for sophistication -->
+        <svg
+            class="absolute bottom-0 left-0 w-48 h-48 opacity-20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+            <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="2"
+                ry="2"
+                stroke="yellow"
+            ></rect>
+            <path
+                d="M8 12h8M8 16h8M8 8h8"
+                stroke="yellow"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            ></path>
+        </svg>
+    </section>
+
+    <!-- Additional Design Section -->
+    <section
+        class="max-w-full mx-auto px-4 md:px-6 py-12 select-none bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md text-gray-200"
+    >
+        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-400">
+            Mengapa Digital Marketing Penting?
+        </h3>
+        <ul class="list-disc list-inside space-y-3 text-lg md:text-xl max-w-4xl">
+            <li>
+                Meningkatkan jangkauan pasar secara global dengan biaya yang lebih efisien
+                dibandingkan pemasaran tradisional.
+            </li>
+            <li>
+                Membangun hubungan yang lebih dekat dengan pelanggan melalui interaksi di
+                media sosial dan konten yang relevan.
+            </li>
+            <li>
+                Memberikan data dan analitik yang membantu dalam pengambilan keputusan
+                bisnis yang lebih tepat.
+            </li>
+            <li>
+                Memungkinkan penargetan audiens yang spesifik sehingga kampanye pemasaran
+                lebih efektif.
+            </li>
+            <li>
+                Meningkatkan brand awareness dan loyalitas pelanggan melalui strategi
+                pemasaran yang konsisten.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Additional Design Section with Communication Devices -->
+    <section
+        class="max-w-full mx-auto px-4 md:px-6 py-20 select-none relative overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mt-12 text-white"
+    >
+        <h3
+            class="text-3xl md:text-4xl font-extrabold mb-8 text-yellow-400 z-10 relative"
+        >
+            Mengapa Digital Marketing Penting?
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 relative">
+            <div>
+                <ul class="list-disc list-inside space-y-3 text-gray-300 text-lg md:text-xl">
+                    <li>
+                        Meningkatkan jangkauan pasar secara global dengan biaya yang lebih
+                        efisien dibandingkan pemasaran tradisional.
+                    </li>
+                    <li>
+                        Membangun hubungan yang lebih dekat dengan pelanggan melalui
+                        interaksi di media sosial dan konten yang relevan.
+                    </li>
+                    <li>
+                        Memberikan data dan analitik yang membantu dalam pengambilan
+                        keputusan bisnis yang lebih tepat.
+                    </li>
+                    <li>
+                        Memungkinkan penargetan audiens yang spesifik sehingga kampanye
+                        pemasaran lebih efektif.
+                    </li>
+                    <li>
+                        Meningkatkan brand awareness dan loyalitas pelanggan melalui
+                        strategi pemasaran yang konsisten.
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center">
+                <img
+                    src="https://th.bing.com/th/id/OIP.Q9IpXUshLJop97cX9vmKfgHaEB?w=334&h=182&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                    alt="Gambar alat komunikasi modern seperti laptop dan smartphone"
+                    class="rounded-lg shadow-lg max-w-full h-auto object-cover border-4 border-yellow-400"
+                />
+            </div>
+        </div>
+        <!-- Decorative SVG or shapes for sophistication -->
+        <svg
+            class="absolute bottom-0 left-0 w-48 h-48 opacity-20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+            <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="2"
+                ry="2"
+                stroke="yellow"
+            ></rect>
+            <path
+                d="M8 12h8M8 16h8M8 8h8"
+                stroke="yellow"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            ></path>
+        </svg>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document
+            .querySelector(".menu-icon")
+            .addEventListener("click", function () {
+                document.querySelector(".nav-links").classList.toggle("active");
+            });
+
+        // Click detection for nav items
+        document.querySelectorAll("nav a").forEach((link) => {
+            link.addEventListener("click", function (e) {
+                if (!this.classList.contains("active")) {
+                    document.querySelectorAll("nav a").forEach((item) => {
+                        item.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                }
+
+                // Close mobile menu after click
+                if (window.innerWidth < 768) {
+                    document.querySelector(".nav-links").classList.remove("active");
+                }
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll("nav a").forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href");
+                if (targetId && targetId.startsWith("#")) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth",
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

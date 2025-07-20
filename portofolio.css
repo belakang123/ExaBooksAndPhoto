@@ -1,0 +1,76 @@
+        /* Enhanced gradient with smooth transitions */
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, 
+                rgba(90, 62, 236, 1) 0%, 
+                rgba(91, 107, 255, 1) 50%, 
+                rgba(128, 202, 255, 1) 100%);
+            background-size: 200% 200%;
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating nav effect */
+        nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        nav a {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 8px;
+        }
+
+        /* Animated underline effect */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hover glow effect */
+        nav a:hover {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Active item styling */
+        nav a.active {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding-top: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+            }
+        }
